@@ -2,4 +2,4 @@
 <h1>Directory</h1>
 <p>Resume: <a href="">Here</a></p>
 <p>Website: <a href="">Here</a></p>
-<p>Email: Zackariahgrogan@gmail.com</p>
+<p>Email: <a href="mailto:Zackariahgrogan@gmail.com">Zackariah Grogan</a></p>
