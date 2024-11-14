@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Portfolio - Zackariah Grogan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <style>
+        .carousel {
+            position: relative;
+            height: 100%;
+            overflow: hidden;
+            background-color: white;
+        }
+        .carousel-inner {
+            height: 100%;
+            position: relative;
+        }
+        .carousel-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-item.active {
+            opacity: 1;
+        }
+        .carousel-item img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .carousel-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 10;
+        }
+        .dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .dot.active {
+            background-color: black;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800 p-4 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-bold">Zackariah A. Grogan</div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
+                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
+                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
+                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
+                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto pt-24 px-4 md:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Graphics Portfolio</h1>
+            <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                A showcase of my graphic design work.
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Gallery items will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-12 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/ZackGrogan/" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zackariah-grogan-3bb82832a/" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:zackariahgrogan@gmail.com" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400"> 2024 Zackariah Grogan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-0');
+            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '✕' : '☰';
+        });
+
+        // Gallery data
+        const galleryData = [
+            {
+                name: 'Air Mobile',
+                images: [
+                    'assets/Graphics/Air Mobile/Artboard 2-100.jpg',
+                    'assets/Graphics/Air Mobile/Artboard 3-100.jpg',
+                    'assets/Graphics/Air Mobile/AMLogoArtboard 1-100.jpg',
+                    'assets/Graphics/Air Mobile/AMLogoArtboard 2-100.jpg',
+                    'assets/Graphics/Air Mobile/AMLogoArtboard 3-100.jpg',
+                    'assets/Graphics/Air Mobile/AMLogoArtboard 4-100.jpg'
+                ]
+            },
+            {
+                name: 'IRIS',
+                images: ['assets/Graphics/IRIS/Asset 1.jpg']
+            },
+            {
+                name: 'JC',
+                images: ['assets/Graphics/JC/Artboard 1-100.jpg']
+            },
+            {
+                name: 'Logik Werk',
+                images: [
+                    'assets/Graphics/Logik Werk/side mock 3d 1.4 .jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 2.1.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 2.2.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 3.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 4.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 5.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 6.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 7.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d 8.jpg',
+                    'assets/Graphics/Logik Werk/side mock 3d.jpg',
+                    'assets/Graphics/Logik Werk/Color Experement 1.jpg'
+                ]
+            },
+            {
+                name: 'Miku Itasha',
+                images: [
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 1.2.1.jpg',
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 2.2.1.jpg',
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 3.2.1.jpg',
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 4.2.1.jpg',
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 5.2.1.jpg',
+                    'assets/Graphics/Miku Itasha Hood Wrap/Mock 6.2.1.jpg'
+                ]
+            },
+            {
+                name: 'Naruto Itasha',
+                images: [
+                    'assets/Graphics/Naruto Itasha/Mock up 6.jpg',
+                    'assets/Graphics/Naruto Itasha/Mock up 7.jpg',
+                    'assets/Graphics/Naruto Itasha/Mock up 8.jpg',
+                    'assets/Graphics/Naruto Itasha/Hood Mock 1.jpg',
+                    'assets/Graphics/Naruto Itasha/Hood Mock 2.jpg',
+                    'assets/Graphics/Naruto Itasha/Hood Mock 3.jpg'
+                ]
+            },
+            {
+                name: 'Pocket To Me',
+                images: [
+                    'assets/Graphics/Pocket To Me/Food-Truck-Mock-Up-2.jpg',
+                    'assets/Graphics/Pocket To Me/Customer Changes.jpg',
+                    'assets/Graphics/Pocket To Me/Customer Changes 2.jpg',
+                    'assets/Graphics/Pocket To Me/New 2.jpg',
+                    'assets/Graphics/Pocket To Me/Serving-side.jpg',
+                    'assets/Graphics/Pocket To Me/1.jpg',
+                    'assets/Graphics/Pocket To Me/3.jpg',
+                    'assets/Graphics/Pocket To Me/4.jpg',
+                    'assets/Graphics/Pocket To Me/brotherhoodArtboard 2.jpg',
+                    'assets/Graphics/Pocket To Me/Rocket Wraps Idea Prop.jpg',
+                    'assets/Graphics/Pocket To Me/Rocket Wraps Idea Prop 2.jpg',
+                    'assets/Graphics/Pocket To Me/Rocket Wraps Idea Prop 3.jpg'
+                ]
+            },
+            {
+                name: 'USARMY',
+                images: [
+                    'assets/Graphics/USARMY/Carvan-100.jpg',
+                    'assets/Graphics/USARMY/Chevy-100.jpg',
+                    'assets/Graphics/USARMY/Dodge-100.jpg'
+                ]
+            },
+            {
+                name: 'Omnishield',
+                images: [
+                    'assets/Graphics/omnishield/Mock 1.jpg',
+                    'assets/Graphics/omnishield/Mock 2.jpg'
+                ]
+            }
+        ];
+
+        // Create gallery items
+        const galleryGrid = document.querySelector('.grid');
+        
+        galleryData.forEach(project => {
+            const article = document.createElement('article');
+            article.className = 'bg-gray-800 rounded-lg overflow-hidden';
+            
+            const container = document.createElement('div');
+            container.className = 'relative h-64';
+            
+            const carousel = document.createElement('div');
+            carousel.className = 'carousel h-full';
+            
+            const carouselInner = document.createElement('div');
+            carouselInner.className = 'carousel-inner';
+            
+            project.images.forEach((image, index) => {
+                const item = document.createElement('div');
+                item.className = `carousel-item ${index === 0 ? 'active' : ''}`;
+                
+                const img = document.createElement('img');
+                img.src = image;
+                img.alt = `${project.name} Design ${index + 1}`;
+                img.className = 'max-w-full max-h-full w-auto h-auto';
+                
+                item.appendChild(img);
+                carouselInner.appendChild(item);
+            });
+            
+            carousel.appendChild(carouselInner);
+            
+            if (project.images.length > 1) {
+                const dots = document.createElement('div');
+                dots.className = 'carousel-dots';
+                
+                project.images.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.className = `dot ${index === 0 ? 'active' : ''}`;
+                    dots.appendChild(dot);
+                });
+                
+                carousel.appendChild(dots);
+            }
+            
+            container.appendChild(carousel);
+            article.appendChild(container);
+            galleryGrid.appendChild(article);
+        });
+
+        // Initialize carousels
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const items = carousel.querySelectorAll('.carousel-item');
+            const dots = carousel.querySelectorAll('.dot');
+            let currentIndex = 0;
+            
+            if (items.length > 1) {
+                setInterval(() => {
+                    items[currentIndex].classList.remove('active');
+                    dots[currentIndex]?.classList.remove('active');
+                    
+                    currentIndex = (currentIndex + 1) % items.length;
+                    
+                    items[currentIndex].classList.add('active');
+                    dots[currentIndex]?.classList.add('active');
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
