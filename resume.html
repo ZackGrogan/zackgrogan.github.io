@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Zackariah Grogan</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-800 p-4 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-bold">Zackariah A. Grogan</div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
+                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
+                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
+                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
+                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
+                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
+                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-24 px-4 md:px-8">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Zackariah Grogan</h1>
+            <h2 class="text-xl text-blue-400">Graphic Designer and Digital Creator</h2>
+        </div>
+
+        <!-- Timeline Section -->
+        <section class="timeline">
+            <ol>
+                <!-- Xpress Skins -->
+                <li>
+                    <div>
+                        <time>Dec 2019 - Aug 2023</time>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Graphic Designer</h3>
+                            <h4 class="text-blue-400">Xpress Skins</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Houston, Texas</p>
+                            <ul class="achievements">
+                                <li>Designed and executed large-format printing projects</li>
+                                <li>Managed Epson S80600 printers and Summa Plotter</li>
+                                <li>Developed templates and systems for workflow efficiency</li>
+                                <li>Managed client projects using Adobe Illustrator and Photoshop</li>
+                                <li>Maintained client relations for satisfaction and repeat business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Cyber Otaku Studios -->
+                <li>
+                    <div>
+                        <time>Sep 2022 - Mar 2024</time>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Graphic Design Specialist</h3>
+                            <h4 class="text-blue-400">Cyber Otaku Studios / Print Pathfinders</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
+                            <ul class="achievements">
+                                <li>Ran a freelance business focusing on large-format print and vinyl cutting</li>
+                                <li>Managed client projects from concept to production</li>
+                                <li>Built strong client relationships for repeat business</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- CBC -->
+                <li>
+                    <div>
+                        <time>Jul 2024 - Present</time>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">High School Diploma (In Progress)</h3>
+                            <h4 class="text-blue-400">CBC</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
+                            <p>Actively pursuing a high school diploma to further personal and professional development.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Career Break -->
+                <li>
+                    <div>
+                        <time>Aug 2023 - Present</time>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Professional Development</h3>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
+                            <p>Engaged in personal and professional growth activities.</p>
+                        </div>
+                    </div>
+                </li>
+                <li></li>
+            </ol>
+
+            <div class="arrows">
+                <button class="arrow arrow__prev disabled" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="arrow arrow__next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section mt-12 mb-12">
+            <h2 class="text-2xl font-bold mb-6">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Adobe Illustrator</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Adobe Photoshop</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Large Format Printing</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span>Vinyl Cutting</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="https://github.com/ZackGrogan/" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/zackariah-grogan-3bb82832a/" target="_blank" class="text-gray-400 hover:text-white transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:zackariahgrogan@gmail.com" class="text-gray-400 hover:text-white transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-400">© 2024 Zackariah Grogan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('translate-x-0');
+            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '✕' : '☰';
+        });
+
+        // Timeline navigation
+        const timeline = document.querySelector('.timeline ol');
+        const items = timeline.querySelectorAll('li');
+        const arrows = document.querySelectorAll('.arrow');
+
+        let currentItem = 0;
+
+        arrows.forEach(arrow => {
+            arrow.addEventListener('click', () => {
+                if (arrow.classList.contains('arrow__prev')) {
+                    currentItem -= 1;
+                } else {
+                    currentItem += 1;
+                }
+
+                if (currentItem >= items.length - 1) {
+                    currentItem = items.length - 2;
+                }
+                if (currentItem < 0) {
+                    currentItem = 0;
+                }
+
+                items.forEach(item => item.classList.remove('selected'));
+                items[currentItem].classList.add('selected');
+
+                arrows[0].classList.toggle('disabled', currentItem === 0);
+                arrows[1].classList.toggle('disabled', currentItem === items.length - 2);
+
+                timeline.style.transform = `translateX(-${currentItem * 100}%)`;
+            });
+        });
+
+        // Animate skill bars
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', animateSkillBars);
+    </script>
+</body>
+</html>
