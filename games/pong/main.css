@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #111827;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px 40px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#gameCanvas {
+    background: black;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding: 20px 0;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+}
+
+.controls {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#startButton {
+    background: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#startButton:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .score {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .game-container {
+        padding: 10px;
+    }
+}
