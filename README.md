@@ -7,4 +7,3 @@ This is a portfolio site for a web developer and graphic designer.
 - HTML
 - CSS
 - JavaScript
-- python
