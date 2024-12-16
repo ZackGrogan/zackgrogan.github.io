@@ -59,7 +59,7 @@ An open-source CLI tool designed to streamline vector data management for AI app
 
 AI-Driven RPG Creative and Narrative Engine for tabletop games like Pathfinder.
 
-- **Technologies**: Python, OpenAI API, Natural Language Processing
+- **Technologies**: Python, HuggingFace API, Natural Language Processing
 - **Features**:
   - Generates dynamic content for storytelling.
   - Assists in enhancing tabletop RPG experiences.
