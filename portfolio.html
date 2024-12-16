@@ -3,38 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development Portfolio - Zackariah Grogan</title>
+    <title>Zackariah A. Grogan - Development Portfolio</title>
+    <meta name="description" content="Explore Zackariah Grogan's software development portfolio, featuring innovative projects like Vector Nexus, a powerful vector data management tool for AI applications.">
+    <meta name="keywords" content="Zackariah Grogan, software developer, Vector Nexus, AI tools, Python projects, semantic search, CLI tool, vector database">
+    <meta name="author" content="Zackariah Grogan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zackgrogan.github.io/portfolio.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zackgrogan.github.io/portfolio.html">
+    <meta property="og:title" content="Zackariah A. Grogan - Development Portfolio">
+    <meta property="og:description" content="Innovative software development projects showcasing AI tools and web applications.">
+    <meta property="og:image" content="https://zackgrogan.github.io/assets/Dev/Portfolio_Site/site.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zackgrogan.github.io/portfolio.html">
+    <meta property="twitter:title" content="Zackariah A. Grogan - Development Portfolio">
+    <meta property="twitter:description" content="Innovative software development projects showcasing AI tools and web applications.">
+    <meta property="twitter:image" content="https://zackgrogan.github.io/assets/Dev/Portfolio_Site/site.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
+<body class="bg-gray-900 text-gray-100">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800 p-4 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">Zackariah A. Grogan</div>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform">
-            <div class="flex flex-col space-y-4">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <!-- Main Content -->
     <main class="container mx-auto pt-24 px-4 md:px-8">
@@ -52,14 +48,20 @@
             <!-- Personal Portfolio Website -->
             <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:transform hover:scale-105 transition duration-300">
                 <div class="relative h-48">
-                    <img src="assets/Dev/Portfolio_Site/site.png" alt="Portfolio Website" class="w-full h-full object-cover">
+                    <img src="assets/Dev/Portfolio_Site/site.png" 
+                         alt="Portfolio Website Screenshot" 
+                         class="w-full h-full object-cover"
+                         loading="lazy"
+                         decoding="async"
+                         width="600"
+                         height="400">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
                 </div>
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">Personal Portfolio Website</h3>
                     <p class="text-gray-400 mb-4">
                         A responsive portfolio website built with HTML, Tailwind CSS, and JavaScript. 
-                        Features dark mode design, image galleries with slideshows, and contact form integration.
+                        Features dark mode design, dynamic content updates, and contact form integration.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">HTML5</span>
@@ -68,99 +70,84 @@
                         <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">EmailJS</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <a href="https://github.com/ZackGrogan/zackgrogan.github.io" target="_blank" 
+                        <a href="https://github.com/ZackGrogan/zackgrogan.github.io" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
                            class="text-blue-400 hover:text-blue-300 transition">
                             <i class="fab fa-github mr-2"></i>View Source
                         </a>
-                        <a href="https://zackgrogan.github.io/Index.html" class="text-blue-400 hover:text-blue-300 transition">
+                        <a href="https://zackgrogan.github.io/index.html" 
+                           class="text-blue-400 hover:text-blue-300 transition">
                             <i class="fas fa-external-link-alt mr-2"></i>Live Demo
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project Card 1 -->
+            <!-- ARCANE Project -->
             <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:transform hover:scale-105 transition duration-300">
                 <div class="relative">
-                    <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-48 object-cover">
-                    <div class="absolute top-0 right-0 bg-blue-600 px-3 py-1 m-2 rounded-full text-sm">
-                        Web App
-                    </div>
+                    <img src="assets/Dev/ARCANE/preview.png" 
+                         alt="ARCANE - AI-Driven RPG Creative and Narrative Engine" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy"
+                         decoding="async"
+                         width="600"
+                         height="400">
+                    <div class="absolute top-0 right-0 bg-purple-600 px-3 py-1 m-2 rounded-full text-sm">AI Project</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
+                    <h3 class="text-xl font-bold mb-2">ARCANE</h3>
                     <p class="text-gray-400 mb-4">
-                        A brief description of the project and its main features. Technologies used and problems solved.
+                        AI-Driven RPG Creative and Narrative Engine for tabletop games like Pathfinder. 
+                        Generates dynamic content and assists in storytelling.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">MongoDB</span>
+                        <span class="px-3 py-1 bg-purple-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-purple-600 rounded-full text-sm">OpenAI API</span>
+                        <span class="px-3 py-1 bg-purple-600 rounded-full text-sm">Natural Language Processing</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">
-                            <i class="fab fa-github mr-2"></i>View Code
-                        </a>
-                        <a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
-                            Live Demo
+                        <a href="https://github.com/ZackGrogan/ARCANE" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="text-blue-400 hover:text-blue-300 transition">
+                            <i class="fab fa-github mr-2"></i>View Source
                         </a>
                     </div>
                 </div>
             </article>
 
-            <!-- Project Card 2 -->
+            <!-- Vector Nexus Project -->
             <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:transform hover:scale-105 transition duration-300">
                 <div class="relative">
-                    <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full h-48 object-cover">
-                    <div class="absolute top-0 right-0 bg-green-600 px-3 py-1 m-2 rounded-full text-sm">
-                        Mobile App
-                    </div>
+                    <img src="assets/Dev/Vector_Nexus/preview.png" 
+                         alt="Vector Nexus - Semantic Search Database Tool" 
+                         class="w-full h-48 object-cover"
+                         loading="lazy"
+                         decoding="async"
+                         width="600"
+                         height="400">
+                    <div class="absolute top-0 right-0 bg-green-500 px-3 py-1 m-2 rounded-full text-sm">Open Source</div>
                 </div>
                 <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
+                    <h3 class="text-xl font-bold mb-2">Vector Nexus</h3>
                     <p class="text-gray-400 mb-4">
-                        A brief description of the project and its main features. Technologies used and problems solved.
+                        An open-source tool designed to streamline vector data management for AI applications. 
+                        Provides a powerful CLI to interact with Qdrant vector database, supporting efficient 
+                        data operations and semantic search capabilities.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Flutter</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Firebase</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Dart</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">Qdrant</span>
+                        <span class="px-3 py-1 bg-blue-600 rounded-full text-sm">CLI</span>
                     </div>
                     <div class="flex justify-between items-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">
-                            <i class="fab fa-github mr-2"></i>View Code
-                        </a>
-                        <a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
-                            Live Demo
-                        </a>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Project Card 3 -->
-            <article class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:transform hover:scale-105 transition duration-300">
-                <div class="relative">
-                    <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full h-48 object-cover">
-                    <div class="absolute top-0 right-0 bg-purple-600 px-3 py-1 m-2 rounded-full text-sm">
-                        API
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
-                    <p class="text-gray-400 mb-4">
-                        A brief description of the project and its main features. Technologies used and problems solved.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">FastAPI</span>
-                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <a href="#" class="text-blue-400 hover:text-blue-300 transition">
-                            <i class="fab fa-github mr-2"></i>View Code
-                        </a>
-                        <a href="#" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition">
-                            Documentation
+                        <a href="https://github.com/ZackGrogan/Vector_Nexus" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="text-blue-400 hover:text-blue-300 transition">
+                            <i class="fab fa-github mr-2"></i>View Source
                         </a>
                     </div>
                 </div>
@@ -186,15 +173,15 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu functionality
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-0');
-            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '✕' : '☰';
-        });
+    
+<script>
+        // Fetch and insert navigation
+        fetch('./includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
     </script>
 </body>
 </html>

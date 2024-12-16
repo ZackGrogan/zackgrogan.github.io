@@ -1,0 +1,240 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+/* Adjust main content padding to account for the fixed nav */
+main {
+    padding-top: 6rem; /* Adjust this value if your navbar height changes */
+}
+
+/* Game specific styles */
+#game-container {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    width: 100%;
+    padding: 30px;
+    background: #2d2d2d;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+p {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 30px;
+}
+
+.hand {
+    margin: 20px 0;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+}
+
+.hand h2 {
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+#player-cards, #dealer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.card {
+    width: 70px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    color: #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.card.hidden {
+    background: #808080;
+    color: #ffffff;
+}
+
+.card.red {
+    color: #ff0000;
+}
+
+.score {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 8px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    min-width: 120px;
+}
+
+button:hover:not(:disabled) {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+}
+
+#game-result {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#game-result.win {
+    color: #4CAF50;
+}
+
+#game-result.lose {
+    color: #f44336;
+}
+
+#game-result.tie {
+    color: #ff9800;
+}
+
+#player-money {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 15px 0;
+    color: #4CAF50;
+}
+
+#bet-amount {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 15px 0;
+    color: #4CAF50;
+}
+
+.chip-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.chip {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chip:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.chip-5 {
+    background: #ff9800;
+}
+
+.chip-10 {
+    background: #2196F3;
+}
+
+.chip-25 {
+    background: #9C27B0;
+}
+
+.chip-100 {
+    background: #f44336;
+}
+
+@media (max-width: 600px) {
+    #game-container {
+        padding: 15px;
+    }
+
+    .card {
+        width: 60px;
+        height: 85px;
+        font-size: 1.5em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+        min-width: 100px;
+    }
+
+    .chip {
+        width: 50px;
+        height: 50px;
+        font-size: 1em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}

@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zackariah Grogan - Portfolio</title>
+    <title>Zackariah A. Grogan - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <style>
         /* Custom styles for animations */
         .fade-in { animation: fadeIn 2s; }
@@ -19,72 +21,70 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
-        /* Mobile menu styles */
-        .mobile-menu {
-            transform: translateX(-100%);
-            transition: transform 0.3s ease-in-out;
-        }
-        .mobile-menu.active {
-            transform: translateX(0);
-        }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM44QLL8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-8HPM44QLL8');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zackariah Grogan",
+        "jobTitle": "Software Developer",
+        "url": "https://zackgrogan.github.io",
+        "sameAs": [
+            "https://github.com/zackgrogan",
+            "https://linkedin.com/in/zackariah-grogan",
+            "https://twitter.com/zackgrogan"
+        ],
+        "knowsAbout": [
+            "Web Development",
+            "AI Projects",
+            "Game Development",
+            "Full Stack Development"
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800 p-4 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">Zackariah A. Grogan</div>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden">
-            <div class="flex flex-col space-y-4">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <!-- Include Navigation -->
+    <div id="nav-placeholder"></div>
 
     <!-- Main Content -->
-    <main class="container mx-auto pt-24 px-4 md:px-8">
+    <main class="container mx-auto pt-24 px-4 md:px-8" role="main" aria-label="Main Content">
         <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12">
             <!-- Profile Image -->
             <div class="w-48 h-48 md:w-64 md:h-64 relative">
-                <img src="assets/Me/Portrait.JPG" alt="Portrait" 
-                     class="w-48 h-48 md:w-64 md:h-64 rounded-full mb-4 md:mb-0 md:mr-4 hover:scale-105 transition object-cover shadow-lg">
+                <img src="assets/Me/Portrait-compressed.JPG" alt="Portrait" 
+                     class="w-48 h-48 md:w-64 md:h-64 rounded-full mb-4 md:mb-0 md:mr-4 hover:scale-105 transition object-cover shadow-lg" 
+                     loading="lazy" decoding="async" aria-label="Portrait Image">
             </div>
             
             <!-- Introduction -->
             <div class="max-w-2xl text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in" aria-label="Introduction Heading">
                     Hello, I'm Zack
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-6 fade-in">
+                <p class="text-xl md:text-2xl text-gray-300 mb-6 fade-in" aria-label="Introduction Text">
                     Aspiring Developer & Graphic Designer
                 </p>
-                <p class="text-gray-400 mb-6">
+                <p class="text-gray-400 mb-6" aria-label="About Text">
                     Hello! I'm a beginner developer with a passion for crafting digital experiences that are both beautiful and user-friendly. 
                     My background in both design and development allows me to bring a fresh, creative approach to every project I take on.
                 </p>
                 <div class="flex justify-center md:justify-start space-x-4">
                     <a href="mailto:zackariahgrogan@gmail.com" 
-                       class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition">
+                       class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-full transition" aria-label="Contact Email">
                         Contact Me
                     </a>
                     <a href="#" 
-                       class="border border-blue-600 hover:bg-blue-600/20 px-6 py-2 rounded-full transition">
+                       class="border border-blue-600 hover:bg-blue-600/20 px-6 py-2 rounded-full transition" aria-label="View Resume">
                         View Resume
                     </a>
                 </div>
@@ -92,7 +92,7 @@
         </div>
 
         <!-- Status Banner -->
-        <div class="bg-gray-800/50 rounded-lg p-4 text-center mb-12">
+        <div class="bg-gray-800/50 rounded-lg p-4 text-center mb-12" role="alert" aria-label="Status Banner">
             <p class="text-lg">
                 Site Under Construction <span class="bounce inline-block">🚧</span>
                 <br>
@@ -101,16 +101,12 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <a href="portfolio.html" class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12" role="contentinfo" aria-label="Quick Links">
+            <a href="portfolio.html" class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition" aria-label="Development Projects">
                 <h2 class="text-xl font-bold mb-2">Development Projects</h2>
                 <p class="text-gray-400">View my latest software development work</p>
             </a>
-            <a href="graphics-portfolio.html" class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition">
-                <h2 class="text-xl font-bold mb-2">Graphics Portfolio</h2>
-                <p class="text-gray-400">Explore my graphic design projects</p>
-            </a>
-            <a href="contact.html" class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition">
+            <a href="contact.html" class="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition" aria-label="Get in Touch">
                 <h2 class="text-xl font-bold mb-2">Get in Touch</h2>
                 <p class="text-gray-400">Let's discuss your next project</p>
             </a>
@@ -118,32 +114,46 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 mt-12 py-8">
+    <footer class="bg-gray-800 mt-12 py-8" role="contentinfo" aria-label="Footer">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="text-gray-400 hover:text-white transition">
+                <a href="https://github.com/zackgrogan" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition" 
+                   aria-label="GitHub Profile">
                     <i class="fab fa-github text-2xl"></i>
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white transition">
+                <a href="https://linkedin.com/in/zackariah-grogan" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition" 
+                   aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin text-2xl"></i>
                 </a>
-                <a href="mailto:zackariahgrogan@gmail.com" class="text-gray-400 hover:text-white transition">
-                    <i class="fas fa-envelope text-2xl"></i>
+                <a href="https://twitter.com/zackgrogan" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="text-gray-400 hover:text-white transition" 
+                   aria-label="Twitter Profile">
+                    <i class="fab fa-twitter text-2xl"></i>
                 </a>
             </div>
-            <p class="text-gray-400"> 2024 Zackariah Grogan. All rights reserved.</p>
+            <p class="text-gray-400">&copy; <span id="currentYear"></span> Zackariah Grogan. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile menu functionality
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            menuBtn.textContent = mobileMenu.classList.contains('active') ? '✕' : '☰';
-        });
+        // Fetch and insert navigation
+        fetch('./includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>

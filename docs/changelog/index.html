@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - Zackariah Grogan</title>
+    <meta name="description" content="Detailed changelog for Zackariah Grogan's personal website and projects">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 mt-16">
+        <h1 class="text-4xl font-bold mb-8 text-center">Changelog</h1>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+            <!-- Changelog Entry -->
+            <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">Release - 2024-12-16</h2>
+                
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Added</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li><strong>Blackjack Game</strong> in <code>games/blackjack/</code>
+                            <ul class="list-disc list-inside pl-4">
+                                <li><code>script.js</code>: Game logic with betting, hitting, standing, doubling down, and dealer AI</li>
+                                <li><code>style.css</code>: Responsive game interface design</li>
+                                <li><code>index.html</code>: Accessible game page</li>
+                            </ul>
+                        </li>
+                        <li><strong>Project Updates Page</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Showcases Portfolio Website</li>
+                                <li>Interactive Games Section</li>
+                                <li>Vector Nexus project details</li>
+                                <li>ARCANE project overview</li>
+                            </ul>
+                        </li>
+                        <li>Centralized Navigation in <code>includes/nav.html</code></li>
+                        <li>Google Analytics Integration</li>
+                        <li>Structured Data with JSON-LD</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Changed</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li><strong>Portfolio Page</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Updated page title</li>
+                                <li>Added comprehensive meta tags</li>
+                                <li>Enhanced project descriptions</li>
+                                <li>Improved image performance</li>
+                            </ul>
+                        </li>
+                        <li><strong>Resume Page</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Updated professional timeline</li>
+                                <li>Improved accessibility</li>
+                                <li>Refined SEO metadata</li>
+                            </ul>
+                        </li>
+                        <li><strong>Navigation</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Centralized menu across all pages</li>
+                                <li>Added Project Updates link</li>
+                                <li>Improved accessibility</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Removed</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Graphics Portfolio page</li>
+                        <li>Placeholder project cards</li>
+                        <li>Unused and commented-out code</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Fixed</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li>Navigation link consistency</li>
+                        <li>Accessibility issues</li>
+                        <li>Image loading and performance</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-semibold text-blue-300 mb-2">Improved</h3>
+                    <ul class="list-disc list-inside text-gray-300">
+                        <li><strong>SEO</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Enhanced meta tags</li>
+                                <li>Implemented structured data</li>
+                            </ul>
+                        </li>
+                        <li><strong>Code Quality</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Centralized navigation</li>
+                                <li>Improved project structure</li>
+                            </ul>
+                        </li>
+                        <li><strong>Performance</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Optimized assets</li>
+                                <li>Reduced rendering blocking</li>
+                            </ul>
+                        </li>
+                        <li><strong>User Experience</strong>
+                            <ul class="list-disc list-inside pl-4">
+                                <li>Responsive design</li>
+                                <li>Interactive elements</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Fetch and insert navigation
+        fetch('../../includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+</body>
+</html>

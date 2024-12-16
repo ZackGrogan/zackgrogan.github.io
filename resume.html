@@ -4,10 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Zackariah Grogan</title>
+    <meta name="description" content="Professional resume of Zackariah Grogan - Software Developer specializing in web development, AI solutions, and creative applications.">
+    <meta name="keywords" content="Zackariah Grogan, software developer, web development, AI projects, resume, portfolio">
+    <meta name="author" content="Zackariah Grogan">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://zackgrogan.github.io/resume.html">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/resume.css" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM44QLL8"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8HPM44QLL8');
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Zackariah Grogan",
+        "jobTitle": "Software Developer",
+        "description": "Software developer specializing in web development, AI solutions, and creative applications",
+        "url": "https://zackgrogan.github.io/resume.html",
+        "sameAs": [
+            "https://github.com/zackgrogan",
+            "https://linkedin.com/in/zackariah-grogan"
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-900 text-gray-100">
     <!-- Navigation -->
@@ -15,24 +42,30 @@
         <div class="container mx-auto flex justify-between items-center px-4">
             <div class="text-xl font-bold">Zackariah A. Grogan</div>
             <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+            <div class="hidden md:flex space-x-6" role="menubar">
+                <a href="index.html" class="hover:text-blue-400 transition" role="menuitem">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition" role="menuitem">Development Portfolio</a>
+                <a href="games/index.html" class="hover:text-blue-400 transition" role="menuitem">Games</a>
+                <a href="project-updates.html" class="hover:text-blue-400 transition" role="menuitem">Project Updates</a>
+                <a href="contact.html" class="hover:text-blue-400 transition" role="menuitem">Contact</a>
             </div>
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+            <button id="menu-btn" 
+                    class="md:hidden flex justify-center w-8 h-8 bg-gray-800 rounded-full hover:bg-gray-700 transition"
+                    aria-label="Open Menu" 
+                    aria-expanded="false" 
+                    aria-controls="mobile-menu">
+                <i class="fas fa-bars text-white text-2xl"></i>
+            </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform">
+        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform" aria-hidden="true">
             <div class="flex flex-col space-y-4">
-                <a href="index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
+                <a href="index.html" class="hover:text-blue-400 transition" role="menuitem">Home</a>
+                <a href="portfolio.html" class="hover:text-blue-400 transition" role="menuitem">Development Portfolio</a>
+                <a href="games/index.html" class="hover:text-blue-400 transition" role="menuitem">Games</a>
+                <a href="project-updates.html" class="hover:text-blue-400 transition" role="menuitem">Project Updates</a>
+                <a href="contact.html" class="hover:text-blue-400 transition" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
@@ -42,73 +75,58 @@
         <!-- Header -->
         <div class="text-center mb-12">
             <h1 class="text-4xl md:text-5xl font-bold mb-4">Zackariah Grogan</h1>
-            <h2 class="text-xl text-blue-400">Graphic Designer and Digital Creator</h2>
+            <h2 class="text-xl text-blue-400">Software Developer</h2>
         </div>
 
         <!-- Timeline Section -->
         <section class="timeline">
             <ol>
-                <!-- Xpress Skins -->
+                <!-- Current Position -->
+                <li>
+                    <div>
+                        <time>Sep 2023 - Present</time>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-bold">Software Developer</h3>
+                            <h4 class="text-blue-400">Freelance</h4>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
+                            <ul class="achievements">
+                                <li>Developing web applications and AI solutions</li>
+                                <li>Creating interactive user experiences</li>
+                                <li>Managing full-stack development projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Previous Experience -->
                 <li>
                     <div>
                         <time>Dec 2019 - Aug 2023</time>
                         <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Graphic Designer</h3>
+                            <h3 class="text-xl font-bold">Design Specialist</h3>
                             <h4 class="text-blue-400">Xpress Skins</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Houston, Texas</p>
                             <ul class="achievements">
-                                <li>Designed and executed large-format printing projects</li>
-                                <li>Managed Epson S80600 printers and Summa Plotter</li>
-                                <li>Developed templates and systems for workflow efficiency</li>
-                                <li>Managed client projects using Adobe Illustrator and Photoshop</li>
-                                <li>Maintained client relations for satisfaction and repeat business</li>
+                                <li>Managed digital design projects</li>
+                                <li>Developed workflow optimization systems</li>
+                                <li>Led client project management</li>
                             </ul>
                         </div>
                     </div>
                 </li>
 
-                <!-- Cyber Otaku Studios -->
+                <!-- Education -->
                 <li>
                     <div>
-                        <time>Sep 2022 - Mar 2024</time>
+                        <time>2023 - Present</time>
                         <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Graphic Design Specialist</h3>
-                            <h4 class="text-blue-400">Cyber Otaku Studios / Print Pathfinders</h4>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
-                            <ul class="achievements">
-                                <li>Ran a freelance business focusing on large-format print and vinyl cutting</li>
-                                <li>Managed client projects from concept to production</li>
-                                <li>Built strong client relationships for repeat business</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- CBC -->
-                <li>
-                    <div>
-                        <time>Jul 2024 - Present</time>
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">High School Diploma (In Progress)</h3>
+                            <h3 class="text-xl font-bold">Computer Science Studies</h3>
                             <h4 class="text-blue-400">CBC</h4>
                             <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
-                            <p>Actively pursuing a high school diploma to further personal and professional development.</p>
+                            <p>Focusing on software development and computer science fundamentals</p>
                         </div>
                     </div>
                 </li>
-
-                <!-- Career Break -->
-                <li>
-                    <div>
-                        <time>Aug 2023 - Present</time>
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Professional Development</h3>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
-                            <p>Engaged in personal and professional growth activities.</p>
-                        </div>
-                    </div>
-                </li>
-                <li></li>
             </ol>
 
             <div class="arrows">
@@ -179,7 +197,7 @@
                     <i class="fas fa-envelope text-2xl"></i>
                 </a>
             </div>
-            <p class="text-gray-400">© 2024 Zackariah Grogan. All rights reserved.</p>
+            <p class="text-gray-400"> 2024 Zackariah Grogan. All rights reserved.</p>
         </div>
     </footer>
 
@@ -190,7 +208,7 @@
         
         menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('translate-x-0');
-            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '✕' : '☰';
+            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '' : '';
         });
 
         // Timeline navigation

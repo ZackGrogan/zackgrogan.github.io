@@ -3,39 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Zackariah Grogan</title>
+    <title>Zackariah A. Grogan - Contact</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 <body class="bg-gray-900 text-gray-100 min-h-screen">
     <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800 p-4 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">Zackariah A. Grogan</div>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-2xl">☰</button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden">
-            <div class="flex flex-col space-y-4">
-                <a href="Index.html" class="hover:text-blue-400 transition">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition">Development Portfolio</a>
-                <a href="graphics-portfolio.html" class="hover:text-blue-400 transition">Graphics Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition">Games</a>
-                <a href="contact.html" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <!-- Main Content -->
     <main class="container mx-auto pt-24 px-4 md:px-8">
@@ -147,6 +124,16 @@
         </div>
     </footer>
 
+    
     <script src="js/contact.js"></script>
+<script>
+        // Fetch and insert navigation
+        fetch('./includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
 </body>
 </html>
