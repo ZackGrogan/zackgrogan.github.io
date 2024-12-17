@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="../../css/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-gray-900 text-gray-100">
@@ -15,53 +14,86 @@
     <div id="nav-placeholder"></div>
 
     <!-- Main Content -->
-    <main class="pt-24 min-h-screen flex items-center justify-center">
-        <div id="game-container">
-            <h1>Blackjack</h1>
-            <p>Try to beat the dealer!</p>
-
-            <div id="player-money">Your Money: $1000</div>
-            <div class="chip-container">
-                <div class="chip chip-5" data-value="5">$5</div>
-                <div class="chip chip-10" data-value="10">$10</div>
-                <div class="chip chip-25" data-value="25">$25</div>
-                <div class="chip chip-100" data-value="100">$100</div>
-            </div>
-            <div id="bet-amount">Current Bet: $0</div>
-            
-            <div id="dealer-hand" class="hand">
-                <h2>Dealer's Hand</h2>
-                <div id="dealer-cards"></div>
-                <div class="score" id="dealer-score">Score: 0</div>
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="game-container w-full">
+            <!-- Header Section -->
+            <div class="header-section mb-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-4xl font-bold text-white">Blackjack</h1>
+                    <a href="rules.html" class="text-blue-400 hover:text-blue-300 transition flex items-center">
+                        <i class="fas fa-book mr-2"></i>View Rules
+                    </a>
+                </div>
             </div>
 
-            <div id="player-hand" class="hand">
-                <h2>Your Hand</h2>
-                <div id="player-cards"></div>
-                <div class="score" id="player-score">Score: 0</div>
-            </div>
+            <!-- Game Table -->
+            <div class="game-table">
+                <!-- Money and Betting -->
+                <div class="betting-section">
+                    <div class="money-display flex justify-between mb-4">
+                        <div id="player-money" class="text-xl font-semibold text-green-400">Your Money: $1000</div>
+                        <div id="bet-amount" class="text-xl text-yellow-400">Current Bet: $0</div>
+                    </div>
+                    <div class="chip-container flex justify-center gap-4 mb-6">
+                        <div class="chip chip-5" data-value="5">
+                            <div class="chip-inner bg-yellow-500">$5</div>
+                        </div>
+                        <div class="chip chip-10" data-value="10">
+                            <div class="chip-inner bg-blue-500">$10</div>
+                        </div>
+                        <div class="chip chip-25" data-value="25">
+                            <div class="chip-inner bg-purple-500">$25</div>
+                        </div>
+                        <div class="chip chip-100" data-value="100">
+                            <div class="chip-inner bg-red-500">$100</div>
+                        </div>
+                    </div>
+                </div>
 
-            <div id="game-controls">
-                <button id="deal-button" disabled>Deal</button>
-                <button id="hit-button" disabled>Hit</button>
-                <button id="stand-button" disabled>Stand</button>
-                <button id="double-button" disabled>Double Down</button>
-            </div>
+                <!-- Game Area -->
+                <div class="hands-section grid grid-cols-2 gap-8">
+                    <!-- Dealer's Hand -->
+                    <div id="dealer-hand" class="hand-container">
+                        <h2 class="text-xl font-semibold mb-4 text-center text-white">Dealer's Hand</h2>
+                        <div id="dealer-cards" class="cards-container flex justify-center gap-4"></div>
+                        <div id="dealer-score" class="score text-lg mt-3 text-center text-yellow-300">Score: 0</div>
+                    </div>
 
-            <div id="game-result"></div>
+                    <!-- Player's Hand -->
+                    <div id="player-hand" class="hand-container">
+                        <h2 class="text-xl font-semibold mb-4 text-center text-white">Your Hand</h2>
+                        <div id="player-cards" class="cards-container flex justify-center gap-4"></div>
+                        <div id="player-score" class="score text-lg mt-3 text-center text-yellow-300">Score: 0</div>
+                    </div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="controls-section mt-8 flex justify-center gap-4">
+                    <button id="deal-button" class="game-button bg-green-600" disabled>
+                        <i class="fas fa-play mr-2"></i>Deal
+                    </button>
+                    <button id="hit-button" class="game-button bg-blue-600" disabled>
+                        <i class="fas fa-plus mr-2"></i>Hit
+                    </button>
+                    <button id="stand-button" class="game-button bg-red-600" disabled>
+                        <i class="fas fa-hand mr-2"></i>Stand
+                    </button>
+                    <button id="double-button" class="game-button bg-purple-600" disabled>
+                        <i class="fas fa-coins mr-2"></i>Double
+                    </button>
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
 
     <script src="script.js"></script>
-    
-<script>
+    <script>
         // Fetch and insert navigation
         fetch('../../includes/nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
+            });
     </script>
 </body>
 </html>

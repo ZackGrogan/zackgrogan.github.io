@@ -103,8 +103,12 @@ class Blackjack {
         this.dealerHand = [];
         this.playerCardsContainer.innerHTML = '';
         this.dealerCardsContainer.innerHTML = '';
-        this.gameResultElement.textContent = '';
-        this.gameResultElement.className = '';
+        
+        // Only update game result if the element exists
+        if (this.gameResultElement) {
+            this.gameResultElement.textContent = '';
+            this.gameResultElement.className = '';
+        }
 
         this.dealInitialCards();
 
@@ -156,10 +160,30 @@ class Blackjack {
             cardElement.classList.add('hidden');
             cardElement.textContent = '?';
         } else {
-            cardElement.textContent = `${card.value}${card.suit}`;
+            // Add suit classes for color
             if (['♥', '♦'].includes(card.suit)) {
-                cardElement.classList.add('red');
+                cardElement.classList.add('hearts');
+            } else {
+                cardElement.classList.add('spades');
             }
+
+            // Create and add top value element
+            const topValue = document.createElement('div');
+            topValue.classList.add('value', 'top-value');
+            topValue.textContent = card.value;
+            cardElement.appendChild(topValue);
+
+            // Create and add bottom value element
+            const bottomValue = document.createElement('div');
+            bottomValue.classList.add('value', 'bottom-value');
+            bottomValue.textContent = card.value;
+            cardElement.appendChild(bottomValue);
+
+            // Create and add suit element
+            const suitElement = document.createElement('div');
+            suitElement.classList.add('suit');
+            suitElement.textContent = card.suit;
+            cardElement.appendChild(suitElement);
         }
 
         container.appendChild(cardElement);
@@ -209,15 +233,38 @@ class Blackjack {
     }
 
     dealerPlay() {
-        const dealerPlay = () => {
-            if (this.dealerScore < 17) {
+        const dealerPlayTurn = () => {
+            const hasAce = this.dealerHand.some(card => card.value === 'A');
+            const dealerScore = this.calculateScore(this.dealerHand);
+
+            // Stop if dealer busts
+            if (dealerScore > 21) {
+                this.determineWinner();
+                return;
+            }
+            
+            // If dealer has an Ace and score is 17 or less, keep hitting
+            if (hasAce && dealerScore <= 17) {
                 this.dealerHit();
-                setTimeout(dealerPlay, 500);
-            } else {
+                setTimeout(dealerPlayTurn, 500);
+            }
+            // If dealer has a "soft" 18 (Ace + 7), hit to try to improve
+            else if (hasAce && dealerScore === 18 && this.dealerHand.length === 2) {
+                this.dealerHit();
+                setTimeout(dealerPlayTurn, 500);
+            }
+            // Without an Ace, use normal strategy (stop at 17 or higher)
+            else if (!hasAce && dealerScore < 17) {
+                this.dealerHit();
+                setTimeout(dealerPlayTurn, 500);
+            }
+            // Otherwise stand
+            else {
                 this.determineWinner();
             }
         };
-        setTimeout(dealerPlay, 500);
+
+        setTimeout(dealerPlayTurn, 500);
     }
 
     determineWinner() {
@@ -236,8 +283,12 @@ class Blackjack {
     }
 
     endGame(message, result) {
-        this.gameResultElement.textContent = message;
-        this.gameResultElement.className = result;
+        // Only update game result if the element exists
+        if (this.gameResultElement) {
+            this.gameResultElement.textContent = message;
+            this.gameResultElement.className = result;
+        }
+        
         this.hitButton.disabled = true;
         this.standButton.disabled = true;
         this.doubleButton.disabled = true;

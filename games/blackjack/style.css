@@ -25,81 +25,142 @@ main {
 }
 
 /* Game specific styles */
-#game-container {
-    position: relative;
-    z-index: 1;
-    max-width: 800px;
-    width: 100%;
-    padding: 30px;
-    background: #2d2d2d;
-    border-radius: 15px;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+.game-container {
+    max-width: 90%;
     margin: 0 auto;
 }
 
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 10px;
-    font-size: 2.5em;
-    font-weight: bold;
+.game-table {
+    background: linear-gradient(to bottom, #1a472a, #2d5a3f);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid #462f22;
+    position: relative;
+    overflow: hidden;
 }
 
-p {
-    text-align: center;
-    color: #cccccc;
-    margin-bottom: 30px;
-}
-
-.hand {
-    margin: 20px 0;
-    padding: 20px;
-    background: #1e1e1e;
-    border-radius: 10px;
-}
-
-.hand h2 {
-    margin: 0 0 15px 0;
-    color: #ffffff;
-    font-size: 1.5em;
-}
-
-#player-cards, #dealer-cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 15px;
-    justify-content: center;
-    min-height: 100px;
+.cards-container {
+    min-height: 180px;
 }
 
 .card {
-    width: 70px;
-    height: 100px;
-    background: #ffffff;
+    background: white;
     border-radius: 8px;
+    width: 120px;
+    height: 180px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.8em;
-    color: #000000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: relative;
+    padding: 12px;
+}
+
+.card .value.top-value {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.card .value.bottom-value {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+    transform: rotate(180deg);
+}
+
+.card .suit {
+    font-size: 72px;
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card.hearts, .card.diamonds {
+    color: #dc2626;
+}
+
+.card.clubs, .card.spades {
+    color: #1f2937;
 }
 
 .card.hidden {
-    background: #808080;
-    color: #ffffff;
+    background-image: 
+        linear-gradient(45deg, #2563eb 25%, transparent 25%),
+        linear-gradient(-45deg, #2563eb 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #2563eb 75%),
+        linear-gradient(-45deg, transparent 75%, #2563eb 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #1d4ed8;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
 }
 
-.card.red {
-    color: #ff0000;
+.hand-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
 }
 
-.score {
-    color: #ffffff;
-    font-size: 1.2em;
-    text-align: center;
+.chip {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.chip:hover {
+    transform: translateY(-5px);
+}
+
+.chip-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border: 4px dashed rgba(255, 255, 255, 0.3);
+    box-shadow: 
+        0 0 0 4px currentColor,
+        0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.game-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+    min-width: 120px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.game-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 #game-controls {
@@ -108,29 +169,6 @@ p {
     gap: 15px;
     margin: 25px 0;
     flex-wrap: wrap;
-}
-
-button {
-    padding: 12px 24px;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 8px;
-    background: #4CAF50;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Poppins', sans-serif;
-    min-width: 120px;
-}
-
-button:hover:not(:disabled) {
-    background: #45a049;
-    transform: translateY(-2px);
-}
-
-button:disabled {
-    background: rgba(255, 255, 255, 0.2);
-    cursor: not-allowed;
 }
 
 #game-result {
@@ -176,65 +214,56 @@ button:disabled {
     flex-wrap: wrap;
 }
 
-.chip {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+@keyframes dealCard {
+    from {
+        opacity: 0;
+        transform: translateY(-100px) rotate(-20deg);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+    }
 }
 
-.chip:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+.card-dealt {
+    animation: dealCard 0.5s ease-out forwards;
 }
 
-.chip-5 {
-    background: #ff9800;
-}
-
-.chip-10 {
-    background: #2196F3;
-}
-
-.chip-25 {
-    background: #9C27B0;
-}
-
-.chip-100 {
-    background: #f44336;
-}
-
-@media (max-width: 600px) {
-    #game-container {
-        padding: 15px;
+@media (max-width: 768px) {
+    .game-container {
+        max-width: 100%;
+        padding: 1rem;
     }
 
     .card {
-        width: 60px;
-        height: 85px;
-        font-size: 1.5em;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 1em;
-        min-width: 100px;
+        width: 100px;
+        height: 150px;
     }
 
     .chip {
         width: 50px;
         height: 50px;
-        font-size: 1em;
     }
 
+    .game-button {
+        min-width: 100px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
     h1 {
         font-size: 2em;
+    }
+}
+
+@media (hover: none) {
+    .card:hover {
+        transform: none;
+    }
+
+    .chip:hover {
+        transform: none;
+        box-shadow: none;
     }
 }
