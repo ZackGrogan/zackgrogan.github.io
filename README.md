@@ -1,4 +1,3 @@
-
 # Zackariah A. Grogan - Personal Portfolio Website
 
 [![Website Badge](https://img.shields.io/website?url=https%3A%2F%2Fzackgrogan.github.io%2Findex.html)](https://zackgrogan.github.io/index.html)
@@ -43,27 +42,6 @@ A responsive portfolio website built with HTML, Tailwind CSS, and JavaScript.
   - Dynamic content updates.
   - Contact form integration.
 - **Source Code**: [GitHub Repository](https://github.com/ZackGrogan/zackgrogan.github.io)
-
-### [Vector Nexus](https://github.com/ZackGrogan/Vector_Nexus)
-
-An open-source CLI tool designed to streamline vector data management for AI applications.
-
-- **Technologies**: Python, Qdrant, CLI
-- **Features**:
-  - Interact with Qdrant vector database.
-  - Efficient data operations.
-  - Semantic search capabilities.
-- **Source Code**: [GitHub Repository](https://github.com/ZackGrogan/Vector_Nexus)
-
-### [ARCANE](https://github.com/ZackGrogan/ARCANE)
-
-AI-Driven RPG Creative and Narrative Engine for tabletop games like Pathfinder.
-
-- **Technologies**: Python, HuggingFace API, Natural Language Processing
-- **Features**:
-  - Generates dynamic content for storytelling.
-  - Assists in enhancing tabletop RPG experiences.
-- **Source Code**: [GitHub Repository](https://github.com/ZackGrogan/ARCANE)
 
 ## Technologies Used
 

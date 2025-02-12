@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Rules - Your Name</title>
+    <meta name="description" content="Learn how to play Pool with detailed rules, strategies, and game mechanics">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="../../css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 mt-16">
+        <h1 class="text-4xl font-bold mb-8 text-center">Pool Rules</h1>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+            <!-- Introduction -->
+            <section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">Introduction</h2>
+                <p class="text-gray-300 mb-4">
+                    Pool is a popular cue sport played on a rectangular table covered with a cloth, where players use a cue stick to strike balls into pockets. The game is known for its strategic play and requires skill and precision.
+                </p>
+                <p class="text-gray-300">
+                    The objective of Pool is to score points by pocketing balls in a specific order, depending on the variation of the game being played.
+                </p>
+            </section>
+
+            <!-- Game Setup -->
+            <section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">Game Setup</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">The Table</h3>
+                        <p class="text-gray-300">
+                            A standard Pool table is 7 to 9 feet long and has six pockets. The game is played with 16 balls: one cue ball and 15 object balls.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">Object of the Game</h3>
+                        <p class="text-gray-300">
+                            Players aim to pocket their designated balls (stripes or solids) and then the 8-ball to win the game.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">Scoring</h3>
+                        <p class="text-gray-300">
+                            Points are scored by successfully pocketing balls. The player who pockets the 8-ball after all their designated balls wins the game.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- The Break -->
+            <section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">The Break</h2>
+                <p class="text-gray-300 mb-4">
+                    The game begins with a break shot, where the cue ball is struck from behind the head string to hit the racked balls. A legal break requires at least four object balls to hit a cushion or pocket an object ball.
+                </p>
+            </section>
+
+            <!-- Gameplay -->
+            <section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">Gameplay</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">Turns</h3>
+                        <p class="text-gray-300">
+                            Players take turns to shoot. A player continues their turn as long as they legally pocket a ball.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-blue-300 mb-2">Fouls</h3>
+                        <p class="text-gray-300">
+                            Fouls occur when a player fails to hit their designated balls first, fails to hit any ball, or scratches the cue ball. Fouls result in the opponent getting ball-in-hand.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Winning the Game -->
+            <section class="bg-gray-800 rounded-lg p-6 shadow-lg">
+                <h2 class="text-2xl font-semibold mb-4 text-blue-400">Winning the Game</h2>
+                <p class="text-gray-300 mb-4">
+                    The game is won by the first player to legally pocket the 8-ball after all their designated balls have been cleared from the table.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        // Fetch and insert navigation
+        fetch('../../includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navigation:', error));
+    </script>
+</body>
+</html>

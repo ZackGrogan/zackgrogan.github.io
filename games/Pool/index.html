@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool - Your Name</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Navigation -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Main Content -->
+    <div class="min-h-screen flex items-center justify-center p-4">
+        <div class="game-container w-full">
+            <!-- Header Section -->
+            <div class="header-section mb-4">
+                <div class="flex justify-between items-center">
+                    <h1 class="text-4xl font-bold text-white">Pool</h1>
+                    <a href="rules.html" class="text-blue-400 hover:text-blue-300 transition flex items-center">
+                        <i class="fas fa-book mr-2"></i>View Rules
+                    </a>
+                </div>
+            </div>
+
+            <!-- Game Area -->
+            <div class="game-area">
+                <!-- Game Table -->
+                <div class="table-container">
+                    <h2 class="text-xl font-semibold mb-4 text-center text-white">Game Table</h2>
+                    <div id="game-table" class="table"></div>
+                </div>
+
+                <!-- Score Display -->
+                <div class="score-display mt-4 text-center">
+                    <p id="player-score">Your Score: 0</p>
+                    <p id="opponent-score">Opponent Score: 0</p>
+                </div>
+
+                <!-- Game Result -->
+                <div id="game-result" class="mt-4 text-center text-xl font-bold"></div>
+
+                <!-- Player Controls -->
+                <div class="controls-section mt-8 flex justify-center gap-4">
+                    <button id="start-button" class="game-button bg-green-600">
+                        <i class="fas fa-play mr-2"></i>Start Game
+                    </button>
+                    <button id="reset-button" class="game-button bg-red-600" disabled>
+                        <i class="fas fa-undo mr-2"></i>Reset Game
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Fetch and insert navigation
+        fetch('includes/nav.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('nav-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

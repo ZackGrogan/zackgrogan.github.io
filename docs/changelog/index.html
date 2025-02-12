@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' cdn.jsdelivr.net; style-src 'self' cdn.jsdelivr.net cdnjs.cloudflare.com;">
     <title>Changelog - Zackariah Grogan</title>
     <meta name="description" content="Detailed changelog for Zackariah Grogan's personal website and projects">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" integrity="sha384-XYZ123" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha384-ABC456" crossorigin="anonymous">
+    
     <link href="../../css/main.css" rel="stylesheet">
 </head>
 <body class="bg-gray-900 text-gray-100">
     <!-- Navigation Placeholder -->
-    <div id="nav-placeholder"></div>
+    <nav id="nav-placeholder"></nav>
 
     <!-- Main Content -->
     <main class="container mx-auto px-4 py-8 mt-16">
@@ -157,13 +163,24 @@
     </main>
 
     <script>
-        // Fetch and insert navigation
-        fetch('../../includes/nav.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('nav-placeholder').innerHTML = data;
-            })
-            .catch(error => console.error('Error loading navigation:', error));
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fetch and insert navigation
+            fetch('../../includes/nav.html')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    const sanitizedData = DOMPurify.sanitize(data);
+                    document.getElementById('nav-placeholder').innerHTML = sanitizedData;
+                })
+                .catch(error => {
+                    console.error('Error loading navigation:', error);
+                    document.getElementById('nav-placeholder').innerHTML = '<p>Navigation failed to load. Please try again later.</p>';
+                });
+        });
     </script>
 </body>
 </html>

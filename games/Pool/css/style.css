@@ -1,0 +1,151 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Navigation styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+/* Adjust main content padding to account for the fixed nav */
+main {
+    padding-top: 6rem; /* Adjust this value if your navbar height changes */
+}
+
+/* Game specific styles */
+.game-container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.game-table {
+    background: linear-gradient(to bottom, #1a472a, #2d5a3f);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border: 4px solid #462f22;
+    position: relative;
+    overflow: hidden;
+}
+
+.pool-ball {
+    background: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pool-table {
+    background: #007a33;
+    border: 5px solid #004d1a;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.game-button {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    color: white;
+    min-width: 120px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.game-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.game-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#game-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+#game-result {
+    text-align: center;
+    font-size: 1.3em;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#game-result.win {
+    color: #4CAF50;
+}
+
+#game-result.lose {
+    color: #f44336;
+}
+
+#player-score {
+    text-align: center;
+    font-size: 1.3em;
+    margin: 15px 0;
+    color: #4CAF50;
+}
+
+.chip-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .pool-ball {
+        width: 50px;
+        height: 50px;
+    }
+
+    .game-button {
+        min-width: 100px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+}
+
+@media (hover: none) {
+    .pool-ball:hover {
+        transform: none;
+    }
+}

@@ -1,261 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Zackariah Grogan</title>
-    <meta name="description" content="Professional resume of Zackariah Grogan - Software Developer specializing in web development, AI solutions, and creative applications.">
-    <meta name="keywords" content="Zackariah Grogan, software developer, web development, AI projects, resume, portfolio">
-    <meta name="author" content="Zackariah Grogan">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://zackgrogan.github.io/resume.html">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/resume.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8HPM44QLL8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8HPM44QLL8');
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Zackariah Grogan",
-        "jobTitle": "Software Developer",
-        "description": "Software developer specializing in web development, AI solutions, and creative applications",
-        "url": "https://zackgrogan.github.io/resume.html",
-        "sameAs": [
-            "https://github.com/zackgrogan",
-            "https://linkedin.com/in/zackariah-grogan"
-        ]
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume - Zackariah Grogan</title>
+  <meta name="description" content="One-page condensed resume of Zackariah Grogan, highlighting skills in graphic design, freelance print services, and process integration using ClickUp and Asuna.">
+  <!-- TailwindCSS from CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* PDF settings: one page, 8.5 x 11 inches, minimal margins */
+    @page {
+      size: 8.5in 11in;
+      margin: 0.25in;
     }
-    </script>
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .no-print { display: none !important; }
+    }
+    /* Condensed styling for one-page layout */
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.2;
+      font-size: 0.85rem;
+      color: #1a202c;
+    }
+    header, main, footer {
+      max-width: 750px;
+      margin: auto;
+    }
+    header {
+      padding: 0.25rem 0;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 0.1rem;
+    }
+    header p {
+      margin: 0.1rem 0;
+      font-size: 0.75rem;
+    }
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      border-bottom: 1px solid #4A5568;
+      margin: 0.75rem 0 0.25rem;
+      padding-bottom: 0.15rem;
+    }
+    .compact ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+      list-style: disc;
+      padding-left: 1.5rem;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    section, article {
+      margin-bottom: 0.5rem;
+    }
+    a.portfolio-link {
+      color: #3182ce;
+      text-decoration: underline;
+      font-size: 0.75rem;
+      display: inline-block;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-gray-800 p-4 z-50">
-        <div class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">Zackariah A. Grogan</div>
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-6" role="menubar">
-                <a href="index.html" class="hover:text-blue-400 transition" role="menuitem">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition" role="menuitem">Development Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition" role="menuitem">Games</a>
-                <a href="project-updates.html" class="hover:text-blue-400 transition" role="menuitem">Project Updates</a>
-                <a href="contact.html" class="hover:text-blue-400 transition" role="menuitem">Contact</a>
-            </div>
-            <!-- Mobile Menu Button -->
-            <button id="menu-btn" 
-                    class="md:hidden flex justify-center w-8 h-8 bg-gray-800 rounded-full hover:bg-gray-700 transition"
-                    aria-label="Open Menu" 
-                    aria-expanded="false" 
-                    aria-controls="mobile-menu">
-                <i class="fas fa-bars text-white text-2xl"></i>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-gray-800 p-4 md:hidden transform -translate-x-full transition-transform" aria-hidden="true">
-            <div class="flex flex-col space-y-4">
-                <a href="index.html" class="hover:text-blue-400 transition" role="menuitem">Home</a>
-                <a href="portfolio.html" class="hover:text-blue-400 transition" role="menuitem">Development Portfolio</a>
-                <a href="games/index.html" class="hover:text-blue-400 transition" role="menuitem">Games</a>
-                <a href="project-updates.html" class="hover:text-blue-400 transition" role="menuitem">Project Updates</a>
-                <a href="contact.html" class="hover:text-blue-400 transition" role="menuitem">Contact</a>
-            </div>
-        </div>
-    </nav>
+<body class="bg-white">
+  <!-- Header -->
+  <header>
+    <h1 class="font-bold">Zackariah Alexander Grogan</h1>
+    <p>+1 509 579 6119 • zackariahgrogan@gmail.com • Kennewick, WA 99336</p>
+    <p>Willing to relocate • Authorized to work in the US</p>
+  </header>
 
-    <!-- Main Content -->
-    <main class="pt-24 px-4 md:px-8">
-        <!-- Header -->
-        <div class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">Zackariah Grogan</h1>
-            <h2 class="text-xl text-blue-400">Software Developer</h2>
-        </div>
+  <main class="px-1">
+    <!-- Updated Summary Section -->
+    <section>
+      <div class="section-title">Summary</div>
+      <p>
+        Reliable and hardworking individual with a strong work ethic and a positive attitude. Experienced in freelance graphic design with expertise in large-format print and vinyl cutting, as well as proficient in Adobe Illustrator and Photoshop. Proven ability to learn quickly, follow instructions, and contribute effectively by developing process templates and organizational systems that enhance team efficiency. Dedicated to producing high-quality work and meeting professional expectations in any role.
+      </p>
+    </section>
 
-        <!-- Timeline Section -->
-        <section class="timeline">
-            <ol>
-                <!-- Current Position -->
-                <li>
-                    <div>
-                        <time>Sep 2023 - Present</time>
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Software Developer</h3>
-                            <h4 class="text-blue-400">Freelance</h4>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
-                            <ul class="achievements">
-                                <li>Developing web applications and AI solutions</li>
-                                <li>Creating interactive user experiences</li>
-                                <li>Managing full-stack development projects</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+    <!-- Updated Design & Technical Skills Section -->
+    <section>
+      <div class="section-title">Design & Technical Skills</div>
+      <ul class="skills-grid">
+        <li>Visual Design & Typography</li>
+        <li>Color Theory & Branding</li>
+        <li>Digital & Large Format Printing</li>
+        <li>Adobe Illustrator & Photoshop</li>
+        <li>Responsive Web Design</li>
+        <li>HTML5 & JavaScript</li>
+        <li>Tailwind CSS</li>
+        <li>Modular Development</li>
+      </ul>
+    </section>
 
-                <!-- Previous Experience -->
-                <li>
-                    <div>
-                        <time>Dec 2019 - Aug 2023</time>
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Design Specialist</h3>
-                            <h4 class="text-blue-400">Xpress Skins</h4>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Houston, Texas</p>
-                            <ul class="achievements">
-                                <li>Managed digital design projects</li>
-                                <li>Developed workflow optimization systems</li>
-                                <li>Led client project management</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
+    <!-- Projects Section -->
+    <section>
+      <div class="section-title">Projects</div>
+      <article class="compact">
+        <h2 class="font-semibold" style="font-size:0.85rem;">Personal Portfolio Website</h2>
+        <p class="italic text-gray-700" style="font-size:0.65rem;">Ongoing</p>
+        <ul>
+          <li>Responsive website built using HTML, Tailwind CSS, and JavaScript.</li>
+          <li>Features a modular navigation bar for consistent design and dynamic content loading.</li>
+          <li>Enhanced SEO and accessibility through comprehensive meta tags, lazy loading, and ARIA roles.</li>
+          <li>Leverages best practices to maintain a robust, scalable codebase.</li>
+        </ul>
+        <p>
+          Visit my portfolio:
+          <a class="portfolio-link" href="https://zackgrogan.github.io/index.html" target="_blank">https://zackgrogan.github.io/index.html</a>
+        </p>
+      </article>
+    </section>
 
-                <!-- Education -->
-                <li>
-                    <div>
-                        <time>2023 - Present</time>
-                        <div class="timeline-content">
-                            <h3 class="text-xl font-bold">Computer Science Studies</h3>
-                            <h4 class="text-blue-400">CBC</h4>
-                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kennewick, Washington</p>
-                            <p>Focusing on software development and computer science fundamentals</p>
-                        </div>
-                    </div>
-                </li>
-            </ol>
+    <!-- Work Experience Section -->
+    <section>
+      <div class="section-title">Work Experience</div>
+      
+      <!-- Freelance Role: Cyber Otaku Studios / Print Pathfinders -->
+      <article class="compact">
+        <h2 class="font-semibold" style="font-size:0.85rem;">Cyber Otaku Studios / Print Pathfinders</h2>
+        <p class="italic text-gray-700" style="font-size:0.65rem;">Self-employed | Sep 2022 – Mar 2024 · Kennewick, WA</p>
+        <ul>
+          <li>Grew a freelance business focused on large-format print setups and vinyl cutting.</li>
+          <li>Managed client projects from concept through production using Adobe Illustrator and Photoshop.</li>
+          <li>Implemented initial setup and custom integrations using Asuna, including webhook configurations, to streamline business processes.</li>
+          <li>Developed and maintained positive client relations, ensuring project satisfaction and repeat business.</li>
+          <li>Handled both creative design and operational aspects for high-quality deliverables.</li>
+        </ul>
+      </article>
 
-            <div class="arrows">
-                <button class="arrow arrow__prev disabled" disabled>
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="arrow arrow__next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-        </section>
+      <!-- Full-time Role: Lead Graphic Designer - XpressSkins -->
+      <article class="compact">
+        <h2 class="font-semibold" style="font-size:0.85rem;">Lead Graphic Designer - XpressSkins</h2>
+        <p class="italic text-gray-700" style="font-size:0.65rem;">Full-time | Dec 2019 – Aug 2023 · Houston, TX</p>
+        <ul>
+          <li>Designed and executed large-format printing projects emphasizing design aesthetics and technical precision.</li>
+          <li>Operated and managed advanced printing equipment including two Epson S80600 printers and a Summa Plotter.</li>
+          <li>Implemented robust file management and product SKU systems for optimal workflow and organization.</li>
+          <li>Supported the design team by developing process templates that enhanced efficiency and quality control.</li>
+          <li>Expertly managed client projects from concept through production using Adobe Illustrator and Photoshop.</li>
+          <li>Utilized ClickUp to streamline project workflows; also contributed to integration efforts for Rocket Wraps and Signs.</li>
+          <li>Maintained positive client relations, ensuring high levels of project satisfaction and repeat business.</li>
+          <li>Excelled in Wide Format Printing and B2B operations while integrating graphic design principles into practical workflows.</li>
+        </ul>
+      </article>
+    </section>
 
-        <!-- Skills Section -->
-        <section class="skills-section mt-12 mb-12">
-            <h2 class="text-2xl font-bold mb-6">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span>Adobe Illustrator</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span>Adobe Photoshop</span>
-                        <span class="skill-percentage">85%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span>Large Format Printing</span>
-                        <span class="skill-percentage">95%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <div class="skill-header">
-                        <span>Vinyl Cutting</span>
-                        <span class="skill-percentage">90%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" style="width: 90%"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <!-- Education Section -->
+    <section>
+      <div class="section-title">Education</div>
+      <article class="compact">
+        <h2 class="font-semibold" style="font-size:0.85rem;">High School Diploma</h2>
+        <p class="italic text-gray-700" style="font-size:0.65rem;">Columbia Basin College - Pasco, WA | Aug 2024 – Dec 2024</p>
+      </article>
+       <article class="compact">
+        <h2 class="font-semibold" style="font-size:0.85rem;">Planned AA Degree - Computer Science</h2>
+        <p class="italic text-gray-700" style="font-size:0.65rem;">Columbia Basin College - Pasco, WA | Winter 2025</p>
+      </article>
+    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-8">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://github.com/ZackGrogan/" target="_blank" class="text-gray-400 hover:text-white transition">
-                    <i class="fab fa-github text-2xl"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/zackariah-grogan-3bb82832a/" target="_blank" class="text-gray-400 hover:text-white transition">
-                    <i class="fab fa-linkedin text-2xl"></i>
-                </a>
-                <a href="mailto:zackariahgrogan@gmail.com" class="text-gray-400 hover:text-white transition">
-                    <i class="fas fa-envelope text-2xl"></i>
-                </a>
-            </div>
-            <p class="text-gray-400"> 2024 Zackariah Grogan. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile menu functionality
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('translate-x-0');
-            menuBtn.textContent = mobileMenu.classList.contains('translate-x-0') ? '' : '';
-        });
-
-        // Timeline navigation
-        const timeline = document.querySelector('.timeline ol');
-        const items = timeline.querySelectorAll('li');
-        const arrows = document.querySelectorAll('.arrow');
-
-        let currentItem = 0;
-
-        arrows.forEach(arrow => {
-            arrow.addEventListener('click', () => {
-                if (arrow.classList.contains('arrow__prev')) {
-                    currentItem -= 1;
-                } else {
-                    currentItem += 1;
-                }
-
-                if (currentItem >= items.length - 1) {
-                    currentItem = items.length - 2;
-                }
-                if (currentItem < 0) {
-                    currentItem = 0;
-                }
-
-                items.forEach(item => item.classList.remove('selected'));
-                items[currentItem].classList.add('selected');
-
-                arrows[0].classList.toggle('disabled', currentItem === 0);
-                arrows[1].classList.toggle('disabled', currentItem === items.length - 2);
-
-                timeline.style.transform = `translateX(-${currentItem * 100}%)`;
-            });
-        });
-
-        // Animate skill bars
-        function animateSkillBars() {
-            const skillBars = document.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', animateSkillBars);
-    </script>
+  <!-- Footer -->
+  <footer class="text-center no-print">
+    <p style="font-size:0.65rem;">© 2025 Zackariah Grogan. All rights reserved.</p>
+    <p style="font-size:0.65rem;">
+      <a href="https://zackgrogan.github.io/index.html" class="underline" target="_blank">https://zackgrogan.github.io/index.html</a>
+    </p>
+  </footer>
 </body>
 </html>
